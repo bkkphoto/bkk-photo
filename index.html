@@ -3,432 +3,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mike Towers — Commercial, editorial, lifestyle and event photography based in Bangkok, Thailand.">
-  <meta name="theme-color" content="#111111">
-  <title>BKK.photo | Photography by Mike Towers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BKK.photo | Photography</title>
+
+  <meta name="description" content="BKK.photo — Photography. People. Places. Based in Bangkok, Thailand, working worldwide.">
+
+  <meta name="theme-color" content="#080711">
 
   <style>
-    :root {
-      --background: #111111;
-      --foreground: #f4f2ee;
-      --muted: #999999;
-      --accent: #d2c5ad;
-      --page-padding: clamp(20px, 5vw, 76px);
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      background: #080711;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     body {
-      background: var(--background);
-      color: var(--foreground);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.5;
+      overflow: hidden;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
+    .welcome {
+      position: relative;
       width: 100%;
+      height: 100vh;
+      height: 100svh;
+      min-height: 500px;
+      overflow: hidden;
+      background: #080711;
+      color: #f5f4f2;
     }
 
-    /* HEADER */
-
-    header {
+    .hero-image {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
-      z-index: 10;
-      padding: 28px var(--page-padding);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .branding {
+      position: absolute;
+      top: 11%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      text-align: center;
+      z-index: 2;
     }
 
     .logo {
-      font-size: 27px;
-      font-weight: 700;
-      letter-spacing: -1.5px;
+      font-size: 17px;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      line-height: 1.4;
     }
 
-    nav {
-      display: flex;
-      gap: 34px;
-      align-items: center;
-    }
-
-    nav a {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      transition: opacity .25s;
-    }
-
-    nav a:hover {
-      opacity: .55;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: 0;
-      color: white;
-      font-size: 26px;
-      cursor: pointer;
-    }
-
-    /* IMAGE PLACEHOLDERS */
-
-    .placeholder {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(135deg, #41413e, #1d1e1c 60%, #34322e);
-      min-height: 250px;
-    }
-
-    .placeholder::after {
-      content: "PHOTOGRAPH PLACEHOLDER";
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      color: rgba(255,255,255,.45);
+    .tagline {
+      margin-top: 13px;
       font-size: 10px;
-      letter-spacing: 2px;
+      font-weight: 300;
+      letter-spacing: 0.19em;
+      line-height: 1.6;
+      opacity: 0.85;
     }
 
-    /* HERO */
-
-    .hero {
-      min-height: 90svh;
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      padding: 130px var(--page-padding) 65px;
-      background:
-        linear-gradient(
-          0deg,
-          rgba(0,0,0,.7),
-          transparent 65%
-        ),
-        linear-gradient(120deg, #34342f, #171918 65%, #41413b);
-    }
-
-    .hero::after {
-      content: "HERO IMAGE PLACEHOLDER";
+    .instagram {
       position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      color: rgba(255,255,255,.35);
-      font-size: 11px;
-      letter-spacing: 3px;
+      right: 38px;
+      bottom: 30px;
+      z-index: 2;
+      color: #f5f4f2;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.16em;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
+    .instagram:hover {
+      opacity: 1;
     }
 
-    .hero h1 {
-      font-size: clamp(38px, 6vw, 76px);
-      line-height: 1.05;
-      font-weight: 400;
-      letter-spacing: -3px;
-    }
-
-    .hero p {
-      margin-top: 20px;
-      color: #ddd;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    /* INTRO */
-
-    .intro {
-      padding: 100px var(--page-padding);
-      max-width: 1000px;
-    }
-
-    .eyebrow {
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 22px;
-    }
-
-    .intro h2 {
-      font-size: clamp(26px, 4vw, 43px);
-      font-weight: 400;
-      line-height: 1.3;
-      letter-spacing: -1px;
-    }
-
-    /* GALLERIES */
-
-    .work-section {
-      padding: 55px var(--page-padding);
-    }
-
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 35px;
-      border-bottom: 1px solid #383838;
-      padding-bottom: 17px;
-    }
-
-    .section-heading h2 {
-      font-size: 25px;
-      font-weight: 400;
-    }
-
-    .section-heading span {
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .gallery-item {
-      min-width: 0;
-    }
-
-    .gallery-item .placeholder {
-      aspect-ratio: 3 / 2;
-      transition: opacity .3s;
-    }
-
-    .gallery-item:hover .placeholder {
-      opacity: .75;
-    }
-
-    .gallery-item.tall .placeholder {
-      aspect-ratio: 4 / 5;
-    }
-
-    .gallery-item.wide {
-      grid-column: span 2;
-    }
-
-    .gallery-item.wide .placeholder {
-      aspect-ratio: 16 / 8;
-    }
-
-    .caption {
-      padding-top: 12px;
-      font-size: 12px;
-      color: #bdbdbd;
-    }
-
-    /* ABOUT */
-
-    .about {
-      padding: 110px var(--page-padding);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .about-image .placeholder {
-      aspect-ratio: 4 / 5;
-    }
-
-    .about-copy h2 {
-      font-size: clamp(30px, 4vw, 48px);
-      font-weight: 400;
-      margin-bottom: 25px;
-      letter-spacing: -1px;
-    }
-
-    .about-copy p {
-      color: #aaa;
-      font-size: 14px;
-      line-height: 1.9;
-      margin-bottom: 18px;
-      max-width: 480px;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      padding: 110px var(--page-padding);
-      background: #1b1b1b;
-    }
-
-    .contact h2 {
-      font-size: clamp(38px, 6vw, 70px);
-      font-weight: 400;
-      letter-spacing: -2px;
-      margin-bottom: 25px;
-    }
-
-    .contact p {
-      color: var(--muted);
-      margin-bottom: 25px;
-    }
-
-    .contact a.email {
-      font-size: clamp(18px, 3vw, 25px);
-      border-bottom: 1px solid var(--accent);
-      padding-bottom: 5px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding: 30px var(--page-padding);
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      color: var(--muted);
-      font-size: 11px;
-    }
-
-    /* TABLET */
-
-    @media (max-width: 900px) {
-      nav {
-        gap: 20px;
-      }
-
-      .about {
-        gap: 35px;
-      }
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 650px) {
-      header {
-        padding-top: 20px;
-        padding-bottom: 20px;
+    @media (max-width: 600px) {
+      .branding {
+        top: 10%;
       }
 
       .logo {
-        font-size: 24px;
+        font-size: 15px;
       }
 
-      .menu-toggle {
-        display: block;
-        position: relative;
-        z-index: 12;
+      .tagline {
+        font-size: 9px;
+        margin-top: 10px;
+        letter-spacing: 0.15em;
       }
 
-      nav {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        min-height: 100svh;
-        background: #111;
-        flex-direction: column;
-        justify-content: center;
-        gap: 35px;
-      }
-
-      nav.open {
-        display: flex;
-      }
-
-      nav a {
-        font-size: 19px;
-      }
-
-      .hero {
-        min-height: 80svh;
-        padding-bottom: 45px;
-      }
-
-      .hero h1 {
-        letter-spacing: -1.5px;
-      }
-
-      .intro {
-        padding-top: 75px;
-        padding-bottom: 65px;
-      }
-
-      .work-section {
-        padding-top: 35px;
-        padding-bottom: 35px;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .gallery-item.wide {
-        grid-column: span 1;
-      }
-
-      .gallery-item.wide .placeholder,
-      .gallery-item .placeholder {
-        aspect-ratio: 4 / 3;
-      }
-
-      .gallery-item.tall .placeholder {
-        aspect-ratio: 4 / 5;
-      }
-
-      .about {
-        padding-top: 75px;
-        padding-bottom: 75px;
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .about-image {
-        order: 2;
-      }
-
-      .contact {
-        padding-top: 75px;
-        padding-bottom: 75px;
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 10px;
+      .instagram {
+        right: 20px;
+        bottom: 22px;
+        font-size: 9px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      * {
-        transition-duration: 0.01ms !important;
+      .instagram {
+        transition: none;
       }
     }
   </style>
@@ -436,207 +126,30 @@
 
 <body>
 
-  <header>
-    <a href="#home" class="logo">BKK.photo</a>
+  <main class="welcome">
 
-    <button class="menu-toggle"
-      aria-label="Open navigation"
-      aria-expanded="false"
-      aria-controls="main-nav">
-      ☰
-    </button>
+    <img
+      class="hero-image"
+      src="bkk-hero.jpg"
+      alt="A vibrant illuminated installation and crowd at a Bangkok event"
+    >
 
-    <nav id="main-nav">
-      <a href="#lifestyle">Lifestyle</a>
-      <a href="#editorial">Editorial</a>
-      <a href="#events">Events</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header class="branding">
+      <h1 class="logo">BKK.photo</h1>
+      <p class="tagline">Photography. People. Places.</p>
+    </header>
 
-  <main>
-
-    <!-- HOMEPAGE HERO: REPLACE WITH YOUR FEATURE IMAGE -->
-
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <h1>Photography<br>with perspective.</h1>
-        <p>Bangkok · Thailand · Worldwide</p>
-      </div>
-    </section>
-
-    <section class="intro">
-      <div class="eyebrow">BKK.photo — Mike Towers</div>
-      <h2>
-        Photography, people and places.
-        Creating visual stories across lifestyle,
-        editorial and corporate events.
-      </h2>
-    </section>
-
-    <!-- LIFESTYLE -->
-
-    <section class="work-section" id="lifestyle">
-      <div class="section-heading">
-        <h2>Lifestyle</h2>
-        <span>01 — Selected work</span>
-      </div>
-
-      <div class="gallery">
-        <div class="gallery-item tall">
-          <div class="placeholder"></div>
-          <div class="caption">Lifestyle / 01</div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="placeholder"></div>
-          <div class="caption">Lifestyle / 02</div>
-        </div>
-
-        <div class="gallery-item wide">
-          <div class="placeholder"></div>
-          <div class="caption">Lifestyle / 03</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDITORIAL -->
-
-    <section class="work-section" id="editorial">
-      <div class="section-heading">
-        <h2>Editorial</h2>
-        <span>02 — Selected work</span>
-      </div>
-
-      <div class="gallery">
-        <div class="gallery-item">
-          <div class="placeholder"></div>
-          <div class="caption">Editorial / 01</div>
-        </div>
-
-        <div class="gallery-item tall">
-          <div class="placeholder"></div>
-          <div class="caption">Editorial / 02</div>
-        </div>
-
-        <div class="gallery-item wide">
-          <div class="placeholder"></div>
-          <div class="caption">Editorial / 03</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EVENTS -->
-
-    <section class="work-section" id="events">
-      <div class="section-heading">
-        <h2>Events</h2>
-        <span>03 — Selected work</span>
-      </div>
-
-      <div class="gallery">
-        <div class="gallery-item wide">
-          <div class="placeholder"></div>
-          <div class="caption">Events / 01</div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="placeholder"></div>
-          <div class="caption">Events / 02</div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="placeholder"></div>
-          <div class="caption">Events / 03</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-
-    <section class="about" id="about">
-      <div class="about-image">
-        <div class="placeholder"></div>
-      </div>
-
-      <div class="about-copy">
-        <div class="eyebrow">A little about me</div>
-        <h2>Behind the camera.</h2>
-
-        <p>
-          I'm Mike Towers, a British photographer and
-          visual storyteller based in Bangkok, Thailand.
-        </p>
-
-        <p>
-          With over 25 years of experience in photography,
-          design and visual communication, I work with
-          commercial, editorial and corporate clients
-          across Southeast Asia and beyond.
-        </p>
-
-        <p>
-          BKK.photo brings together selected photography
-          and visual work from across these disciplines.
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-
-    <section class="contact" id="contact">
-      <div class="eyebrow">Get in touch</div>
-      <h2>Have a project<br>in mind?</h2>
-
-      <p>For commissions, assignments and collaborations.</p>
-
-      <!-- Replace with your preferred contact email -->
-      <a class="email" href="mailto:YOUR-EMAIL@example.com">
-        Let's talk →
-      </a>
-    </section>
+    <a
+      class="instagram"
+      href="https://www.instagram.com/bangkokphotographer/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit BKK.photo on Instagram"
+    >
+      INSTAGRAM ↗
+    </a>
 
   </main>
 
-  <footer>
-    <span>© <span id="year"></span> Mike Towers · BKK.photo</span>
-    <span>Bangkok, Thailand</span>
-    <span>Photography · Video · Creative</span>
-  </footer>
-
-  <script>
-    // Mobile navigation
-
-    const menuButton = document.querySelector('.menu-toggle');
-    const navigation = document.querySelector('#main-nav');
-
-    menuButton.addEventListener('click', () => {
-      const isOpen = navigation.classList.toggle('open');
-
-      menuButton.setAttribute('aria-expanded', isOpen);
-      menuButton.setAttribute(
-        'aria-label',
-        isOpen ? 'Close navigation' : 'Open navigation'
-      );
-      menuButton.textContent = isOpen ? '×' : '☰';
-    });
-
-    navigation.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navigation.classList.remove('open');
-        menuButton.setAttribute('aria-expanded', 'false');
-        menuButton.setAttribute('aria-label', 'Open navigation');
-        menuButton.textContent = '☰';
-      });
-    });
-
-    // Automatic copyright year
-
-    document.querySelector('#year').textContent =
-      new Date().getFullYear();
-  </script>
-
 </body>
 </html>
-
