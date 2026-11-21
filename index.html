@@ -91,6 +91,9 @@
       right: 38px;
       bottom: 30px;
       z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       color: #f5f4f2;
       text-decoration: none;
       font-size: 10px;
@@ -98,6 +101,10 @@
       letter-spacing: 0.16em;
       opacity: 0.8;
       transition: opacity 0.3s ease;
+    }
+
+    .instagram svg {
+      flex-shrink: 0;
     }
 
     .instagram:hover {
@@ -156,6 +163,21 @@
       rel="noopener noreferrer"
       aria-label="Visit BKK.photo on Instagram"
     >
+      <svg
+        width="13"
+        height="13"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+      </svg>
       INSTAGRAM ↗
     </a>
 
