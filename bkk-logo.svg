@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1074.43 433.95"><metadata><?xpacket begin="" id="W5M0MpCehiHzreSzNTczkc9d"?><x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 6.0.0"><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmpMM:DocumentID="xmp.did:cb9f5498-bb58-4572-8043-8c369e6bfb9b" xmpMM:InstanceID="xmp.iid:cb9f5498-bb58-4572-8043-8c369e6bfb9b" dcterms:provenance="https://cai-manifests.adobe.com/manifests/urn-c2pa-fa99e571-416b-4e79-aee2-17121c8eb103-adobe"> </rdf:Description></rdf:RDF></x:xmpmeta>
+<?xpacket end="w"?></metadata>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #074eff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <polygon class="cls-1" points="929.49 244.53 975.39 244.64 975.46 293.68 1023.42 293.62 1023.39 341.47 1074.43 341.49 1074.43 433.94 952.33 433.95 952.3 386.92 909.61 386.84 909.66 340.79 867.47 340.81 867.41 293.78 843.3 293.77 843.29 433.83 726.05 433.86 726.07 .11 843.29 .05 843.25 153.94 865.82 153.93 866.06 103.6 906.97 103.51 906.98 52.71 954.03 52.79 954.12 .03 1073.65 0 1073.45 92.92 1020.28 92.85 1020.23 145.16 973.28 145.15 973.29 197.04 929.6 197.05 929.49 244.53"/>
+        <polygon class="cls-1" points="567.71 244.54 612.32 244.6 612.32 293.65 660.53 293.62 660.51 341.46 705.4 341.6 705.41 433.88 590.05 433.94 589.97 386.93 547.3 386.94 547.28 340.84 507.16 340.75 507.14 293.79 484.44 293.71 484.45 433.83 364.82 433.91 364.82 .13 484.45 .03 484.43 153.97 506.26 153.98 506.39 103.59 545.2 103.55 545.21 52.72 590.02 52.71 590.09 .02 705.04 .03 705.05 92.84 657.91 92.92 657.78 145.05 611.1 145.22 611.06 197.1 567.71 197.09 567.71 244.54"/>
+      </g>
+      <path class="cls-1" d="M293.81,223.77l50.27.24-.02,148.77-50.14.06-.03,61.08L.02,433.87,0,.19,277.94.03l.09,49.9,63.55.2-.08,119.38-47.53.11L293.81,223.77ZM219.2,89.71l-100,.11.08,72.12,100-.11L219.2,89.71ZM219.19,244.68l-99.99.07.07,90.1,99.98-.07L219.19,244.68Z"/>
+    </g>
+  </g>
+</svg>
