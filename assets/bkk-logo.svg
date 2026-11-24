@@ -5,6 +5,23 @@
     <style>
       .cls-1 {
         fill: #074eff;
+        animation: bkk-colour-cycle 10s ease-in-out infinite;
+      }
+
+      @keyframes bkk-colour-cycle {
+        0%, 100% { fill: #074eff; }
+        18% { fill: #4930d6; }
+        36% { fill: #7836c8; }
+        52% { fill: #b044bd; }
+        62% { fill: #e0ae50; }
+        76% { fill: #7836c8; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cls-1 {
+          animation: none;
+          fill: #074eff;
+        }
       }
     </style>
   </defs>
